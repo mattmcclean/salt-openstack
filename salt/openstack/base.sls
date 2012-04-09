@@ -16,7 +16,7 @@ bridge-utils:
   pkg:
     - installed
 
-rabbit-server:
+rabbitmq-server:
   pkg:
     - installed
 

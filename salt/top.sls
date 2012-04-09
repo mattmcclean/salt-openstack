@@ -1,5 +1,5 @@
 base:
-  'nova-ctrl*.example.com':
+  'novactrl*.example.com':
     - openstack.base
     - openstack.mysql
 #    - openstack.keystone
