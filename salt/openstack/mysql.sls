@@ -31,7 +31,7 @@ mysql -u root -e "CREATE DATABASE nova":
 mysql -u root -e "GRANT ALL PRIVILEGES ON nova.* TO 'novadbadmin'@'%' IDENTIFIED BY 'dieD9Mie'":
   cmd:
     - run
-    - unless: {{ salt['mysql.user_exists']('novadbadmin') }}
+    - unless: {{ salt['mysql.user_exists']('novadbadmin')('%') }}
 
 mysql -u root -e "CREATE DATABASE glance":
   cmd:
@@ -41,4 +41,4 @@ mysql -u root -e "CREATE DATABASE glance":
 mysql -u root -e "GRANT ALL PRIVILEGES ON glance.* TO 'glancedbadmin'@'%' IDENTIFIED BY 'ohC3teiv'":
   cmd:
     - run
-    - unless: {{ salt['mysql.user_exists']('glancedbadmin') }}
+    - unless: {{ salt['mysql.user_exists']('glancedbadmin')('%') }}
