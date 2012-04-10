@@ -21,3 +21,14 @@ python-keystone:
 python-keystoneclient:
   pkg:
     - installed
+
+/tmp/keystone_data.sh:
+  file:
+    - managed
+    - source: salt://openstack/keystone_data.sh
+    - user: root
+    - group: root
+    - mode: 744
+  cmd:
+    - run
+
