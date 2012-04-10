@@ -31,4 +31,6 @@ python-keystoneclient:
     - mode: 744
   cmd:
     - run
+    - require:
+        - file: /tmp/keystone_data.sh
 
